@@ -15,7 +15,6 @@ import com.Ordina.CodeChallenge.interfaces.WordFrequency;
 import com.Ordina.CodeChallenge.service.WordFrequencyService;
 
 
-
 @RestController
 public class WordFrequencyController {
 	
@@ -31,7 +30,7 @@ public class WordFrequencyController {
 	}
 	
 	@PostMapping("/getHighestFrequency") //This service will accept plain text input
-	public int calculateHighestFrequency(@RequestBody String text) {
+	public int calculateHighestFrequency(@RequestBody String text) { //controller advice for exception 
 		return service.calculateHighestFrequency(text);
 	}
 	
@@ -39,7 +38,7 @@ public class WordFrequencyController {
 	public int calculateFrequencyForWord (@RequestBody Map<String, String> request) {
 		if(request.containsKey("text") && request.containsKey("word"))
 			return service.calculateFrequencyForWord(request.get("text"), request.get("word"));
-		logger.info("Invalid input for calculateFrequencyForWord");
+		logger.info("Invalid input for calculateFrequencyForWord");//warn
 		return 0;
 	}
 	

@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.Ordina.CodeChallenge.service.WordFrequencyService;
 
 @SpringBootTest
-class WordCountApplicationTests {
+class WordCountApplicationTests { //Cover controller as well
 
 	@Autowired
 	private WordFrequencyService service;

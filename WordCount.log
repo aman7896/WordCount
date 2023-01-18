@@ -1,43 +1,69 @@
-2022-10-19 19:35:01.915  INFO 24924 --- [main] c.O.CodeChallenge.WordCountApplication   : Starting WordCountApplication using Java 17 on LAPTOP-7K3E0268 with PID 24924 (D:\CodeChallenge\WordCount\target\classes started by 91790 in D:\CodeChallenge\WordCount)
-2022-10-19 19:35:01.923  INFO 24924 --- [main] c.O.CodeChallenge.WordCountApplication   : No active profile set, falling back to 1 default profile: "default"
-2022-10-19 19:35:03.090  INFO 24924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-10-19 19:35:03.100  INFO 24924 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-19 19:35:04.630  INFO 24924 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-19 19:35:04.777  INFO 24924 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-19 19:35:04.778  INFO 24924 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2754 ms
-2022-10-19 19:35:05.200  INFO 24924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-10-19 19:35:05.212  INFO 24924 --- [main] c.O.CodeChallenge.WordCountApplication   : Started WordCountApplication in 3.746 seconds (JVM running for 4.128)
-2022-10-19 19:35:08.727  INFO 24924 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-19 19:35:08.727  INFO 24924 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-19 19:35:08.729  INFO 24924 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-10-19 19:35:08.821  INFO 24924 --- [http-nio-8080-exec-2] c.O.C.service.WordFrequencyService       : Entering function calculateMostFrequentNWords
-2022-10-19 19:35:08.821  INFO 24924 --- [http-nio-8080-exec-2] c.O.C.service.WordFrequencyService       : Entering function getWords
-2022-10-19 19:35:08.836  INFO 24924 --- [http-nio-8080-exec-2] c.O.C.service.WordFrequencyService       : Returning from function getWords
-2022-10-19 19:35:08.838  INFO 24924 --- [http-nio-8080-exec-2] c.O.C.service.WordFrequencyService       : Returning from function calculateMostFrequentNWords
-2022-10-19 19:47:07.349  INFO 43248 --- [main] c.O.C.WordCountApplicationTests          : Starting WordCountApplicationTests using Java 17 on LAPTOP-7K3E0268 with PID 43248 (started by 91790 in D:\CodeChallenge\WordCount)
-2022-10-19 19:47:07.351  INFO 43248 --- [main] c.O.C.WordCountApplicationTests          : No active profile set, falling back to 1 default profile: "default"
-2022-10-19 19:47:08.889  INFO 43248 --- [main] c.O.C.WordCountApplicationTests          : Started WordCountApplicationTests in 1.844 seconds (JVM running for 2.7)
-2022-10-19 19:47:09.323  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateFrequencyForWord
-2022-10-19 19:47:09.324  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
-2022-10-19 19:47:09.328  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
-2022-10-19 19:47:09.328  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateFrequencyForWord
-2022-10-19 19:47:09.351  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateFrequencyForWord
-2022-10-19 19:47:09.352  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
-2022-10-19 19:47:09.355  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
-2022-10-19 19:47:09.356  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateFrequencyForWord
-2022-10-19 19:47:09.361  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateMostFrequentNWords
-2022-10-19 19:47:09.361  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
-2022-10-19 19:47:09.362  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
-2022-10-19 19:47:09.366  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateMostFrequentNWords
-2022-10-19 19:47:09.373  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateHighestFrequency
-2022-10-19 19:47:09.374  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
-2022-10-19 19:47:09.374  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
-2022-10-19 19:47:09.375  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateHighestFrequency
-2022-10-19 19:47:09.380  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateHighestFrequency
-2022-10-19 19:47:09.381  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
-2022-10-19 19:47:09.381  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
-2022-10-19 19:47:09.381  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateHighestFrequency
-2022-10-19 19:47:09.386  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateHighestFrequency
-2022-10-19 19:47:09.387  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
-2022-10-19 19:47:09.387  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
-2022-10-19 19:47:09.388  INFO 43248 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateHighestFrequency
+2023-01-18 12:13:10.249  INFO 8032 --- [main] c.O.C.WordCountApplicationTests          : Starting WordCountApplicationTests using Java 17 on LAPTOP-7K3E0268 with PID 8032 (started by 91790 in D:\CodeChallenge\WordCount)
+2023-01-18 12:13:10.256  INFO 8032 --- [main] c.O.C.WordCountApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2023-01-18 12:13:11.692  INFO 8032 --- [main] c.O.C.WordCountApplicationTests          : Started WordCountApplicationTests in 1.798 seconds (JVM running for 2.82)
+2023-01-18 12:13:12.131  INFO 8032 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateHighestFrequency
+2023-01-18 12:13:12.131  INFO 8032 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 12:13:12.135  INFO 8032 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 12:13:12.137  INFO 8032 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateHighestFrequency
+2023-01-18 12:14:08.774  INFO 6908 --- [main] c.O.C.WordCountApplicationTests          : Starting WordCountApplicationTests using Java 17 on LAPTOP-7K3E0268 with PID 6908 (started by 91790 in D:\CodeChallenge\WordCount)
+2023-01-18 12:14:08.775  INFO 6908 --- [main] c.O.C.WordCountApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2023-01-18 12:14:10.306  INFO 6908 --- [main] c.O.C.WordCountApplicationTests          : Started WordCountApplicationTests in 1.878 seconds (JVM running for 2.918)
+2023-01-18 12:14:10.726  INFO 6908 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateHighestFrequency
+2023-01-18 12:14:10.727  INFO 6908 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 12:14:10.730  INFO 6908 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 12:14:10.730  INFO 6908 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateHighestFrequency
+2023-01-18 12:14:18.337  INFO 22224 --- [main] c.O.C.WordCountApplicationTests          : Starting WordCountApplicationTests using Java 17 on LAPTOP-7K3E0268 with PID 22224 (started by 91790 in D:\CodeChallenge\WordCount)
+2023-01-18 12:14:18.338  INFO 22224 --- [main] c.O.C.WordCountApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2023-01-18 12:14:19.958  INFO 22224 --- [main] c.O.C.WordCountApplicationTests          : Started WordCountApplicationTests in 1.958 seconds (JVM running for 3.031)
+2023-01-18 12:14:20.365  INFO 22224 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateHighestFrequency
+2023-01-18 12:14:20.365  INFO 22224 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 12:14:20.369  INFO 22224 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 12:14:20.370  INFO 22224 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateHighestFrequency
+2023-01-18 12:43:41.423  INFO 21820 --- [main] c.O.C.WordCountApplicationTests          : Starting WordCountApplicationTests using Java 17 on LAPTOP-7K3E0268 with PID 21820 (started by 91790 in D:\CodeChallenge\WordCount)
+2023-01-18 12:43:41.425  INFO 21820 --- [main] c.O.C.WordCountApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2023-01-18 12:43:42.879  INFO 21820 --- [main] c.O.C.WordCountApplicationTests          : Started WordCountApplicationTests in 1.81 seconds (JVM running for 2.884)
+2023-01-18 12:43:43.319  INFO 21820 --- [main] c.O.C.service.WordFrequencyService       : Entering function calculateMostFrequentNWords
+2023-01-18 12:43:43.320  INFO 21820 --- [main] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 12:43:43.323  INFO 21820 --- [main] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 12:43:43.324  INFO 21820 --- [main] c.O.C.service.WordFrequencyService       : Returning from function calculateMostFrequentNWords
+2023-01-18 12:58:02.383  INFO 3348 --- [main] c.O.C.WordCountApplicationTests          : Starting WordCountApplicationTests using Java 17 on LAPTOP-7K3E0268 with PID 3348 (started by 91790 in D:\CodeChallenge\WordCount)
+2023-01-18 12:58:02.384  INFO 3348 --- [main] c.O.C.WordCountApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2023-01-18 12:58:03.871  INFO 3348 --- [main] c.O.C.WordCountApplicationTests          : Started WordCountApplicationTests in 1.852 seconds (JVM running for 2.944)
+2023-01-18 12:58:12.423  INFO 22888 --- [main] c.O.CodeChallenge.WordCountApplication   : Starting WordCountApplication using Java 17 on LAPTOP-7K3E0268 with PID 22888 (D:\CodeChallenge\WordCount\target\classes started by 91790 in D:\CodeChallenge\WordCount)
+2023-01-18 12:58:12.430  INFO 22888 --- [main] c.O.CodeChallenge.WordCountApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-01-18 12:58:14.012  INFO 22888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-01-18 12:58:14.028  INFO 22888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-18 12:58:14.029  INFO 22888 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-18 12:58:14.234  INFO 22888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-18 12:58:14.234  INFO 22888 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1709 ms
+2023-01-18 12:58:14.835  INFO 22888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-18 12:58:14.854  INFO 22888 --- [main] c.O.CodeChallenge.WordCountApplication   : Started WordCountApplication in 3.037 seconds (JVM running for 3.76)
+2023-01-18 12:58:36.039  INFO 22888 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-18 12:58:36.039  INFO 22888 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-18 12:58:36.040  INFO 22888 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-18 12:58:36.146  INFO 22888 --- [http-nio-8080-exec-4] c.O.C.R.WordFrequencyController          : Invalid input for calculateFrequencyForWord
+2023-01-18 12:58:41.864  INFO 22888 --- [http-nio-8080-exec-5] c.O.C.R.WordFrequencyController          : Invalid input for calculateFrequencyForWord
+2023-01-18 12:59:20.135  INFO 22888 --- [http-nio-8080-exec-8] c.O.C.service.WordFrequencyService       : Entering function calculateFrequencyForWord
+2023-01-18 12:59:20.136  INFO 22888 --- [http-nio-8080-exec-8] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 12:59:20.138  INFO 22888 --- [http-nio-8080-exec-8] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 12:59:20.139  INFO 22888 --- [http-nio-8080-exec-8] c.O.C.service.WordFrequencyService       : Returning from function calculateFrequencyForWord
+2023-01-18 12:59:34.984  INFO 22888 --- [http-nio-8080-exec-9] c.O.C.service.WordFrequencyService       : Entering function calculateMostFrequentNWords
+2023-01-18 12:59:34.985  INFO 22888 --- [http-nio-8080-exec-9] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 12:59:35.016  INFO 22888 --- [http-nio-8080-exec-9] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 12:59:35.018  INFO 22888 --- [http-nio-8080-exec-9] c.O.C.service.WordFrequencyService       : Returning from function calculateMostFrequentNWords
+2023-01-18 13:00:09.544  INFO 22888 --- [http-nio-8080-exec-2] c.O.C.service.WordFrequencyService       : Entering function calculateMostFrequentNWords
+2023-01-18 13:00:09.544  INFO 22888 --- [http-nio-8080-exec-2] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 13:00:09.544  INFO 22888 --- [http-nio-8080-exec-2] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 13:00:09.545  INFO 22888 --- [http-nio-8080-exec-2] c.O.C.service.WordFrequencyService       : Returning from function calculateMostFrequentNWords
+2023-01-18 13:00:22.387  INFO 22888 --- [http-nio-8080-exec-3] c.O.C.service.WordFrequencyService       : Entering function calculateMostFrequentNWords
+2023-01-18 13:00:22.388  INFO 22888 --- [http-nio-8080-exec-3] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 13:00:22.388  INFO 22888 --- [http-nio-8080-exec-3] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 13:00:22.388  INFO 22888 --- [http-nio-8080-exec-3] c.O.C.service.WordFrequencyService       : Returning from function calculateMostFrequentNWords
+2023-01-18 13:00:48.123  INFO 22888 --- [http-nio-8080-exec-6] c.O.C.service.WordFrequencyService       : Entering function calculateHighestFrequency
+2023-01-18 13:00:48.124  INFO 22888 --- [http-nio-8080-exec-6] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 13:00:48.124  INFO 22888 --- [http-nio-8080-exec-6] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 13:00:48.126  INFO 22888 --- [http-nio-8080-exec-6] c.O.C.service.WordFrequencyService       : Returning from function calculateHighestFrequency
+2023-01-18 13:01:01.812  INFO 22888 --- [http-nio-8080-exec-7] c.O.C.service.WordFrequencyService       : Entering function calculateHighestFrequency
+2023-01-18 13:01:01.812  INFO 22888 --- [http-nio-8080-exec-7] c.O.C.service.WordFrequencyService       : Entering function getWords
+2023-01-18 13:01:01.812  INFO 22888 --- [http-nio-8080-exec-7] c.O.C.service.WordFrequencyService       : Returning from function getWords
+2023-01-18 13:01:01.812  INFO 22888 --- [http-nio-8080-exec-7] c.O.C.service.WordFrequencyService       : Returning from function calculateHighestFrequency

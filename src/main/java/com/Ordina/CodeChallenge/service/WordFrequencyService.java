@@ -1,12 +1,7 @@
 package com.Ordina.CodeChallenge.service;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +14,7 @@ import com.Ordina.CodeChallenge.model.WordFrequencyClass;
 @Component
 public class WordFrequencyService implements WordFrequencyAnalyzer{
 	
-	private static final Comparator<Map.Entry<String, Integer>> SORT = new MapSort();
+//	private static final Comparator<Map.Entry<String, Integer>> SORT = new MapSort();
 	
 	Logger logger = LoggerFactory.getLogger(WordFrequencyService.class);
 	
@@ -31,12 +26,14 @@ public class WordFrequencyService implements WordFrequencyAnalyzer{
 		Map <String,Integer> map = getWords(text);  //Getting the word map with frequencies
 		
 		Set<Map.Entry<String, Integer>> s = map.entrySet(); 
-		
-		for(Map.Entry<String,Integer> it: s) {
-			int val = it.getValue();
-			if (val > high) //Maintaining highest frequency value
-				high = val;
-		}
+
+		high = s.stream().max((a,b) -> a.getValue().compareTo(b.getValue())).get().getValue();
+
+//		for(Map.Entry<String,Integer> it: s) {
+//			int val = it.getValue();
+//			if (val > high) //Maintaining highest frequency value
+//				high = val;
+//		}
 		
 		logger.info("Returning from function calculateHighestFrequency");
 		return high;
@@ -63,22 +60,33 @@ public class WordFrequencyService implements WordFrequencyAnalyzer{
 		Map<String,Integer> map = getWords(text); //Getting the word map with frequencies
 		
 		ArrayList<Map.Entry<String, Integer>> words = new ArrayList<Map.Entry<String, Integer>>(map.entrySet()); //To store and sort the word map
-        
-		Collections.sort(words, SORT); //Using custom comparator to sort according to frequency,alphabetical order
-		
-		if(n>words.size())  
+
+		if(n>words.size())
 			n=words.size(); //To avoid error in case N is greater than total number of words. All records will be shown in this case
-		
-		List<WordFrequency> result = new ArrayList<>();
-		
-		int i=0;
-		for(Map.Entry<String, Integer> it : words) {
-			if(i==n)
-				break; 
-			WordFrequency word = new WordFrequencyClass(it.getKey(),it.getValue()); //Storing the words in desired output format
-			result.add(word);
-			i++; //to maintain count of records while iterating the map
-		}
+
+		List<WordFrequency> result = words
+				.stream()
+				.sorted((a,b) -> {
+					if(!a.getValue().equals(b.getValue()))
+						return b.getValue().compareTo(a.getValue());
+					else
+						return a.getKey().compareTo(b.getKey());
+				}).limit(n).map(a -> new WordFrequencyClass(a.getKey(),a.getValue()))
+				.collect(Collectors.toList());
+
+
+
+
+//		Collections.sort(words, SORT); //Using custom comparator to sort according to frequency,alphabetical order
+//
+//		int i=0;
+//		for(Map.Entry<String, Integer> it : words) {
+//			if(i==n)
+//				break;
+//			WordFrequency word = new WordFrequencyClass(it.getKey(),it.getValue()); //Storing the words in desired output format
+//			result.add(word);
+//			i++; //to maintain count of records while iterating the map
+//		}
 		
 		logger.info("Returning from function calculateMostFrequentNWords");
 		return result;
@@ -90,7 +98,7 @@ public class WordFrequencyService implements WordFrequencyAnalyzer{
 		String word = "";
 		
 		Map <String,Integer> wordmap = new HashMap<String,Integer>();
-		
+
 		for(int i=0; i<text.length(); i++) {
 			char ch=text.charAt(i);
 			if((ch>='A' && ch<='Z') || (ch>='a' && ch<='z')) //Adding to word variable as long as we encounter alphabets
